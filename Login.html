@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <div class="login-box" id="loginbox">
+        <h1>Register</h1>
+
+        <form @submit.prevent="checklogin">
+            <div class="textbox">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input type="text" placeholder="Username" v-model="username">
+            </div>
+            <div class="textbox">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                <input type="password" placeholder="Password" v-model="password">
+            </div>
+            <button class="btn" type="submit">Login</button>
+            <a href="Register.html"><input class="btn" type="button" name="" value="Register"></a>
+        </form>
+
+
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAiAuEEZfZ0_cF04WheGc4gKYGd4YW8PJM",
+            authDomain: "faceverification-550df.firebaseapp.com",
+            databaseURL: "https://faceverification-550df.firebaseio.com",
+            projectId: "faceverification-550df",
+            storageBucket: "faceverification-550df.appspot.com",
+            messagingSenderId: "371149616510",
+            appId: "1:371149616510:web:be47ffcfd96463c0d2af2f"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="./js/login.js"></script>
+
+</body>
+
+</html>
